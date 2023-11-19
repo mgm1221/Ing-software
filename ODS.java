@@ -6,4 +6,11 @@ public class ODS {
         this.nombre = s;
         this.numODS = n;
     }
+    public String get_nombre(){
+        return this.nombre;
+    }
+    public int get_id(){
+        return this.numODS;
+    }
+
 }
