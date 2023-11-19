@@ -1,11 +1,11 @@
 public class Encargado{
-    private string username;
-    private string correo;
-    private string password;
-    private string cargo;
-    private string departamento;
+    private String username;
+    private String correo;
+    private String password;
+    private String cargo;
+    private String departamento;
 
-    public Encargado(string u, string c, string p, string car, string dep){
+    public Encargado(String u, String c, String p, String car, String dep){
         this.username = u;
         this.correo = c;
         this.password = p;
@@ -17,4 +17,3 @@ public class Encargado{
 
     }
 }
-public class 
