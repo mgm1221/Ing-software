@@ -2,6 +2,10 @@ public class Contribucion {
     private String descripcion;
     private Date fecha;
 
+    public Contribucion(String s, Date d){
+        this.descripcion = s;
+        this.fecha = d;
+    }
     public String getDescripcion() {
         return descripcion;
     }
