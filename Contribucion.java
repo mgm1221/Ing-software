@@ -6,9 +6,11 @@ public class Contribucion {
     private ODS ods;
     private ArrayList<Meta> metas;
 
-    public Contribucion(String s, Date d){
+    public Contribucion(ODS ods, ArrayList<Meta> metas, String s, Date d){
+        this.ods = ods;
+        this.metas = metas;
         this.descripcion = s;
-        this.fecha = d;
+        fecha = d;
     }
     public String getDescripcion() {
         return descripcion;
