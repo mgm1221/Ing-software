@@ -39,4 +39,8 @@ public class Item {
         }
         return false;
     }
+    public void crearContribucion(int ods, ArrayList<Meta> metas, String descripcion){
+        Contribucion cont = new Contribucion(ods, metas, descripcion, null);
+        contribuciones.add(cont);
+    }
 }
