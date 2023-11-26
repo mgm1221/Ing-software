@@ -31,7 +31,7 @@ public class ControladorArt {
 
         ArrayList<Meta> metas = ods.getMetas(id_metas);
         
-        Contribucion cont = new Contribucion(ods, metas, descripcion, null)
+        it.crearContribucion(id_ODS, metas, descripcion);
 
     }
 
