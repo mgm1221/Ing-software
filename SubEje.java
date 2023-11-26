@@ -15,11 +15,12 @@ public class SubEJe{
     public string getNombre(){
         return nombre;
     }
+
     public int porcentajeODS(int numODS){
         int tam = items.size();
         int contribuciones = 0;
         for(Item it: items){
-            Boolean flag= it.chequear_contribuciones_ODS(numODS);
+            boolean flag= it.chequear_ODS(numODS);
             if(flag){
                 contribuciones++;
             }
