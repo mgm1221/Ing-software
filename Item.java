@@ -30,4 +30,13 @@ public class Item {
         }
 
     }
+    public boolean chequear_ODS(int numODS){
+        for(Contribucion cont: contribuciones){
+            ODS ods = cont.getOds();
+            if (ods.get_id() == numODS) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
