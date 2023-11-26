@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+
 public class Contribucion {
     private String descripcion;
     private Date fecha;
+    private ODS ods;
+    private ArrayList<Meta> metas;
 
     public Contribucion(String s, Date d){
         this.descripcion = s;
@@ -21,5 +25,13 @@ public class Contribucion {
     public Date getFecha() {
         return fecha;
     }
+    public ODS getOds(){
+        return this.ods;
+    }
+    public ArrayList<Meta> getMetas(){
+
+        return this.metas;
+    }
+
 }
 
