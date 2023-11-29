@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Date;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
 public class Item {
     private int idItem;
@@ -39,8 +40,8 @@ public class Item {
         }
         return false;
     }
-    public void crearContribucion(int ods, ArrayList<Meta> metas, String descripcion){
-        Contribucion cont = new Contribucion(ods, metas, descripcion, null);
+    public void crearContribucion(int ods, ArrayList<Meta> metas, String descripcion, Date date){
+        Contribucion cont = new Contribucion(idItem, ods, metas, descripcion, date);
         contribuciones.add(cont);
     }
 }

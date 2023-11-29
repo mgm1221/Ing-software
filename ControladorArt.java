@@ -13,9 +13,8 @@ public class ControladorArt {
         }
     }
     public void AnadirContribucion(Encargado e, int id_item, int id_ODS,int[] id_metas, String descripcion){
-        Item it;
-        ODS ods;
-        String descripcion;
+        Item it = null;
+        ODS ods = null;
         for(Item i: items){
             if(i.getIdItem() == id_item){
                 it = i;

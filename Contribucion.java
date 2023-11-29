@@ -1,16 +1,18 @@
 import java.util.ArrayList;
-
+import java.util.Date;
 public class Contribucion {
     private String descripcion;
     private Date fecha;
+    private Item item;
     private ODS ods;
     private ArrayList<Meta> metas;
 
-    public Contribucion(ODS ods, ArrayList<Meta> metas, String s, Date d){
+    public Contribucion(Item item, ODS ods, ArrayList<Meta> metas, String descripcion, Date date){
+        this.item = item;
         this.ods = ods;
         this.metas = metas;
-        this.descripcion = s;
-        fecha = d;
+        this.descripcion = descripcion;
+        fecha = date;
     }
     public String getDescripcion() {
         return descripcion;
