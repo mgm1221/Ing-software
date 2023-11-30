@@ -12,8 +12,14 @@ public class Encargado{
         this.cargo = car;
         this.departamento = dep;
     }
-    public void anadir_Contribucion(int id_item,int id_cont, int id_metas[]){
-        Contribucion nueva = Contribucion(id_item,id_cont,id_metas);
-
-    }
+    public String getUsername() {return username;}
+    public void setUsername(String username) {this.username = username;}
+    public String getCorreo() {return correo;}
+    public void setCorreo(String correo) {this.correo = correo;}
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password = password;}
+    public String getCargo() {return cargo;}
+    public void setCargo(String cargo) {this.cargo = cargo;}
+    public String getDepartamento() {return departamento;}
+    public void setDepartamento(String departamento) {this.departamento = departamento;}
 }

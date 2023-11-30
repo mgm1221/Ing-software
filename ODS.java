@@ -8,6 +8,7 @@ public class ODS {
     public ODS(String s, int n){
         this.nombre = s;
         this.numODS = n;
+        this.metas = new ArrayList<>();
     }
     public String get_nombre(){
         return this.nombre;
@@ -15,11 +16,14 @@ public class ODS {
     public int get_id(){
         return this.numODS;
     }
-    public ArrayList<Meta> getMetas(int[] arr){
+    public ArrayList<Meta> getMetas(){
+        return metas;
+    }
+    public ArrayList<Meta> getMetasEsp(int[] arr){
         ArrayList<Meta> m = new ArrayList<Meta>();
         int contarr = 0;
         for(Meta met: metas){
-            if(met.get_Id_meta() == arr[contarr]){
+            if(met.getIdMeta() == arr[contarr]){
                 m.add(met);
             }
         }

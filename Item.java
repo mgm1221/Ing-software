@@ -8,28 +8,26 @@ public class Item {
     private String nombre;
     private ArrayList<Contribucion> contribuciones;
 
+    public Item(int id, String nombre){
+        this.idItem = id;
+        this.nombre = nombre;
+        this.contribuciones = new ArrayList<>();
+    }
     public int getIdItem() {
         return idItem;
     }
-
     public void setIdItem(int idItem) {
         this.idItem = idItem;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void aportes(){
-        for(Contribucion cont: contribuciones){
-            ODS ods = cont.getOds();
-            ArrayList<Meta> m = cont.getMetas();
-
-        }
-
+    public void crearContribucion(Encargado e, int ods, ArrayList<Meta> metas, String descripcion, Date date){
+        Contribucion cont = new Contribucion(e, idItem, ods, metas, descripcion, date);
+        contribuciones.add(cont);
     }
     public boolean chequear_ODS(int numODS){
         for(Contribucion cont: contribuciones){
@@ -40,8 +38,18 @@ public class Item {
         }
         return false;
     }
-    public void crearContribucion(int ods, ArrayList<Meta> metas, String descripcion, Date date){
-        Contribucion cont = new Contribucion(idItem, ods, metas, descripcion, date);
-        contribuciones.add(cont);
+    public boolean chequearFecha(Date fecha1, Date fecha2){
+        Date fecha;
+        for(Contribucion cont: contribuciones){
+            fecha = cont.getFecha();
+            if(fecha.equals(fecha1)){
+                return true;
+            }else if(fecha.equals(fecha2)){
+                return true;
+            }else if(fecha.after(fecha1) && fecha.before(fecha2)){
+                return true;
+            }
+        }
+        return false;
     }
 }

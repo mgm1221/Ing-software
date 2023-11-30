@@ -1,18 +1,11 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ControladorArt {
     private ArrayList<Item> items;
     private ArrayList<ODS> OD;
 
-    public void Vizualizar(){
-        
-        for(Item it: items){
-            String nombreItem = it.getNombre();
-            
-            it.aportes();
-        }
-    }
-    public void AnadirContribucion(Encargado e, int id_item, int id_ODS,int[] id_metas, String descripcion){
+    public void AnadirContribucion(Encargado e, int id_item, int id_ODS,int[] id_metas, String descripcion, Date fecha){
         Item it = null;
         ODS ods = null;
         for(Item i: items){
@@ -28,9 +21,9 @@ public class ControladorArt {
             }
         }
 
-        ArrayList<Meta> metas = ods.getMetas(id_metas);
+        ArrayList<Meta> metas = ods.getMetasEsp(id_metas);
         
-        it.crearContribucion(id_ODS, metas, descripcion);
+        it.crearContribucion(e,id_ODS, metas, descripcion, fecha);
 
     }
 

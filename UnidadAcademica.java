@@ -2,15 +2,17 @@ public class UnidadAcademica {
     private int idUnidadAc;
     private String nombre;
 
-    public int get_Id_unidad_ac() {
+    public int getIdUnidadAc() {
         return idUnidadAc;
     }
-
-    public void set_Id_unidad_ac(int idUnidadAc) {
+    public void setIdUnidadAc(int idUnidadAc) {
         this.idUnidadAc = idUnidadAc;
     }
-    public String get_nombre(){
+    public String getNombre() {
         return this.nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
 

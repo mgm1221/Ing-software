@@ -6,10 +6,16 @@ public class Meta {
         this.id_meta = i;
         this.descripcion = d;
     }
-    public int get_Id_meta(){
+    public int getIdMeta() {
         return this.id_meta;
     }
-    public  String get_descipcion(){
+    public void setIdMeta(int id_meta) {
+        this.id_meta = id_meta;
+    }
+    public String getDescripcion() {
         return this.descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
