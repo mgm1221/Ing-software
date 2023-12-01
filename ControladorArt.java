@@ -3,7 +3,12 @@ import java.util.Date;
 
 public class ControladorArt {
     private ArrayList<Item> items;
-    private ArrayList<ODS> OD;
+    private ArrayList<ODS> ODS;
+
+    public ControladorArt(ArrayList<Item> items, ArrayList<ODS> ODS){
+        this.items = items;
+        this.ODS = ODS;
+    }
 
     public void AnadirContribucion(Encargado e, int id_item, int id_ODS,int[] id_metas, String descripcion, Date fecha){
         Item it = null;
@@ -14,7 +19,7 @@ public class ControladorArt {
                 break;
             }
         }
-        for(ODS o: OD){
+        for(ODS o: ODS){
             if(o.get_id() == id_ODS){
                 ods = o;
                 break;
