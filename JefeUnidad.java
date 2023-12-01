@@ -19,4 +19,7 @@ public class JefeUnidad {
     public void setPassword(String password) {
         this.password = password;
     }
+    public UnidadAcademica getUnidadAcademica() {
+        return this.unidadAcademica;
+    }
 }

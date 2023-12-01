@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Meta {
     private int id_meta;
     private String descripcion;
+    private ArrayList<Indicador> indicadores;
 
     public Meta(int i, String d){
         this.id_meta = i;
