@@ -1,9 +1,11 @@
 public class JefeUnidad {
     private String username;
     private String password;
-    public JefeUnidad(String username, String password){
+    private UnidadAcademica unidadAcademica;
+    public JefeUnidad(String username, String password, UnidadAcademica unidadAcademica){
         this.username = username;
         this.password = password;
+        this.unidadAcademica = unidadAcademica;
     }
     public String getUsername() {
         return this.username;

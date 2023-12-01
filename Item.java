@@ -7,11 +7,14 @@ public class Item {
     private int idItem;
     private String nombre;
     private ArrayList<Contribucion> contribuciones;
+    private ArrayList<Persona> personas;
 
     public Item(int id, String nombre){
         this.idItem = id;
         this.nombre = nombre;
         this.contribuciones = new ArrayList<>();
+        this.personas = new ArrayList<>();
+
     }
     public int getIdItem() {
         return idItem;
@@ -24,6 +27,12 @@ public class Item {
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    public ArrayList<Contribucion> getContribuciones(){
+        return contribuciones;
+    }
+    public ArrayList<Persona> getPersonas(){
+        return personas;
     }
     public void crearContribucion(Encargado e, int ods, ArrayList<Meta> metas, String descripcion, Date date){
         Contribucion cont = new Contribucion(e, idItem, ods, metas, descripcion, date);

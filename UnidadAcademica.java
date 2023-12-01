@@ -1,6 +1,15 @@
+import java.util.ArrayList;
+
 public class UnidadAcademica {
     private int idUnidadAc;
     private String nombre;
+    private ArrayList<Persona> personas;
+
+    public UnidadAcademica(int idUnidadAc, String nombre){
+        this.idUnidadAc = idUnidadAc;
+        this.nombre = nombre;
+        personas = new ArrayList<>();
+    }
 
     public int getIdUnidadAc() {
         return idUnidadAc;
@@ -13,6 +22,9 @@ public class UnidadAcademica {
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    public ArrayList<Persona> getPersonas() {
+        return this.personas;
     }
 }
 

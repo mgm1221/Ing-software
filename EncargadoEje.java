@@ -1,9 +1,12 @@
 public class EncargadoEje {
     private String username;
     private String password;
-    public EncargadoEje(String username, String password){
+    private Eje eje;
+    
+    public EncargadoEje(String username, String password, Eje eje){
         this.username = username;
         this.password = password;
+        this.eje = eje;
     }
     public String getUsername() {
         return this.username;
